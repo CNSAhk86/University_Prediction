@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport 메타 태그 추가 -->
+    <title>University Prediction</title>
+    <style>
+        /* 전체 페이지 및 폰트 설정 */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #282c34; /* 배경색 */
+            color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 폼 스타일링 */
+        form {
+            width: 100%;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #1c2028; /* 폼 배경색 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 헤더 스타일링 */
+        h1 {
+            color: #61dafb; /* 제목 색상 */
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* 레이블 및 입력 필드 스타일링 */
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 70%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: #333842; /* 입력 필드 배경색 */
+            color: #fff; /* 입력 필드 텍스트 색상 */
+        }
+
+        /* 버튼 스타일링 */
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4caf50; /* 버튼 색상 */
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a045; /* 버튼 호버 색상 */
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <h1>University Prediction</h1>
+        {{ form.as_p }}
+        <button type="submit"><strong>Submit</strong></button>
+    </form>
+</body>
+</html>
